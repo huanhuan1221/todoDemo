@@ -4,11 +4,11 @@ const isDev = process.env.NODE_ENV === "development";
 
 const config = {
   target: "web",
-  entry: path.join(__dirname, "./src/index.js"), //入口
+  entry: path.join(__dirname, "../client/index.js"), //入口
   output: {
     //出口
     filename: "bundle.[hash:8]js", //出口文件名
-    path: path.join(__dirname, "dist") //出口文件打包的文件
+    path: path.join(__dirname, "../dist") //出口文件打包的文件
   },
   module: {
     rules: [
@@ -27,7 +27,7 @@ const config = {
             loader: "url-loader",
             options: {
               limit: 1024,
-              name: "[name]-huanhuan.[ext]"
+              name: "resources/[path][name].[hash:8].[ext]"
             }
           }
         ]

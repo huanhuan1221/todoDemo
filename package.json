@@ -5,16 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js"
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.config.client.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.client.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
     "autoprefixer": "^9.6.0",
     "babel-core": "^6.26.3",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "^7.1.5",
+    "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-vue-jsx": "^3.7.0",
     "babel-preset-env": "^1.7.0",
     "cross-env": "^5.2.0",
@@ -27,15 +32,11 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "url-loader": "^1.1.2",
-    "vue": "^2.6.10",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.5.1",
     "webpack-merge": "^4.2.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "webpack-cli": "^3.3.2"
   }
 }
