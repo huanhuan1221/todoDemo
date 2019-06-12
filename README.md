@@ -6,7 +6,6 @@
 ## Build Setup
 
 ``` bash
-# https://github.com/Jokcy/vue-todo-tech
 # install dependencies
 npm i webpack vue vue-loader
 npm i css-loader vue-template-compiler
